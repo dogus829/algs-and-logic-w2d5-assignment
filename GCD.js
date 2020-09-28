@@ -1,5 +1,13 @@
 // find the greatest common divisor of the two numbers given
 
-const gcd = function(a, b) {
-  // your code here
-}
+var gcd = function (n, n2) {
+  var r = 0;
+  while (n !== 0) {
+    r = n2 % n;
+    n2 = n;
+    n = r;
+  }
+  return n2;
+};
+
+console.log(gcd(12, 64));
